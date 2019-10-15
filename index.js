@@ -1,5 +1,6 @@
 const app = require('express')()
 const bodyParser = require('body-parser')
+const port = process.env.PORT || 3000
 
 app.use(bodyParser.json())
 
@@ -35,5 +36,5 @@ app.post('/webhooks/dtmf', (req, res) => {
   res.json(ncco)
 })
 
-app.listen(3000)
+app.listen(port)
 console.log("Welcome...")
