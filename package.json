@@ -1,0 +1,23 @@
+{
+  "name": "smart_node_ivr",
+  "version": "1.0.0",
+  "description": "Customer care Interactive Voice Response",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "call",
+    "voice",
+    "response",
+    "interaction",
+    "feedback",
+    "solution"
+  ],
+  "author": "KUTH <system.infomarket@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
