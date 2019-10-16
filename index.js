@@ -43,4 +43,8 @@ app.post('/webhooks/dtmf', (req, res) => {
 })
 
 app.listen(port)
+<<<<<<< HEAD
 console.log("Server Status: => Active\nCurrent Mode: => Running...")
+=======
+console.log("Server Status: => Active")
+>>>>>>> a0302a59e6b1f5212ab05ccf81a6f204625104fe
