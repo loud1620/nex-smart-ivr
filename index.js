@@ -1,9 +1,14 @@
 "use strict"
 const app = require('express')()
 const bodyParser = require('body-parser')
+const path = require("path")
 const port = process.env.PORT || 3000
 
 app.use(bodyParser.json())
+
+app.get("/", function(req, resp){
+  resp.sendFile('index.html', {root: path.join(__dirname, './files')})
+})
 
 app.get('/webhooks/answer', (req, res) => {
   const ncco = [{
@@ -14,9 +19,8 @@ app.get('/webhooks/answer', (req, res) => {
     },
     {
       action: 'input',
-      voiceName : "Kendra",
-      maxDigits: 10,
-      eventUrl: [`http://3841331a.ngrok.io/webhooks/dtmf`]
+      maxDigits: 1,
+      eventUrl: [req.protocol + "://" + req.get('host') + "/webhooks/dtmf"]
     }
   ]
 
@@ -25,10 +29,11 @@ app.get('/webhooks/answer', (req, res) => {
 
 app.post('/webhooks/events', (req, res) => {
   console.log(req.body)
-  res.send(200);
+  res.sendStatus(200);
 })
 
 app.post('/webhooks/dtmf', (req, res) => {
+  console.log(req.body)
   const ncco = [{
     action: 'talk',
     text: `You pressed ${req.body.dtmf}`
@@ -37,10 +42,5 @@ app.post('/webhooks/dtmf', (req, res) => {
   res.json(ncco)
 })
 
-<<<<<<< HEAD
 app.listen(port)
-console.log("Welcome...")
-=======
-app.listen(port)
-console.log("Server Status: => Active")
->>>>>>> 484a9e32c85dc2af46649e1de95a9897a139f76f
+console.log("Server Status: => Active\nCurrent Mode: => Running...")
