@@ -37,10 +37,5 @@ app.post('/webhooks/dtmf', (req, res) => {
   res.json(ncco)
 })
 
-<<<<<<< HEAD
-app.listen(port)
-console.log("Welcome...")
-=======
 app.listen(port)
 console.log("Server Status: => Active")
->>>>>>> 484a9e32c85dc2af46649e1de95a9897a139f76f
