@@ -17,7 +17,7 @@ app.get('/webhooks/answer', (req, res) => {
       action: 'talk',
       voiceName : "Kendra",
       bargeIn: true,
-      text: 'Voice Message'
+      text: 'Hola cómo estás hoy'
     },
     {
       action: 'input',
