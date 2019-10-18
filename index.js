@@ -17,7 +17,7 @@ app.get('/webhooks/answer', (req, res) => {
       action: 'talk',
       voiceName : "Kendra",
       bargeIn: true,
-      text: 'Hello. and welcome to HSBC customer care center, please provide your customer ID'
+      text: 'Voice Message'
     },
     {
       action: 'input',
