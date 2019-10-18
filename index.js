@@ -1,8 +1,9 @@
 "use strict"
 const app = require('express')()
 const bodyParser = require('body-parser')
-const path = require("path")
+const path = require('path')
 const port = process.env.PORT || 3000
+const webhooks = 'http://76e4ca33.ngrok.io'
 
 app.use(bodyParser.json())
 
@@ -11,7 +12,8 @@ app.get("/", function(req, resp){
 })
 
 app.get('/webhooks/answer', (req, res) => {
-  const ncco = [{
+  const ncco = [
+    {
       action: 'talk',
       voiceName : "Kendra",
       bargeIn: true,
@@ -19,8 +21,7 @@ app.get('/webhooks/answer', (req, res) => {
     },
     {
       action: 'input',
-      maxDigits: 1,
-      eventUrl: [req.protocol + "://" + req.get('host') + "/webhooks/dtmf"]
+      eventUrl: [`http://76e4ca33.ngrok.io/webhooks/dtmf`]
     }
   ]
 
@@ -43,8 +44,4 @@ app.post('/webhooks/dtmf', (req, res) => {
 })
 
 app.listen(port)
-<<<<<<< HEAD
 console.log("Server Status: => Active\nCurrent Mode: => Running...")
-=======
-console.log("Server Status: => Active")
->>>>>>> a0302a59e6b1f5212ab05ccf81a6f204625104fe
