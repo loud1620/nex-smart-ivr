@@ -21,7 +21,7 @@ app.get('/webhooks/answer', (req, res) => {
     },
     {
       action: 'input',
-      eventUrl: [`http://76e4ca33.ngrok.io/webhooks/dtmf`]
+      eventUrl: [`https://morning-refuge-61975.herokuapp.com/webhooks/dtmf`]
     }
   ]
 
