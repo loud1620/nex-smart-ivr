@@ -17,7 +17,7 @@ app.get('/webhooks/answer', (req, res) => {
       action: 'talk',
       voiceName : "Kendra",
       bargeIn: true,
-      text: '<speak><brake time="1s" /><prosody volume="loud">Hello </prosody><brake time="0.5s" /><prosody rate="fast"> and welcome to </prosody> <prosody pitch="x-low">HSBC customer assistance center.</prosody><brake time="2s" For account balance enquiry,<brake time="0.5s" /> press 1.<brake time="1s" /> For funds transfer,<brake time="0.5s" /> press 2 <brake time="1s" />or press 3 to transfer to an agent.</speak>'
+      text: "<speak><brake time='1s' /><prosody volume='loud'>Hello </prosody><brake time='0.5s' /><prosody rate='fast'> and welcome to </prosody> <prosody pitch='x-low'>HSBC customer assistance center.</prosody><brake time='2s' For account balance enquiry,<brake time='0.5s' /> press 1.<brake time='1s' /> For funds transfer,<brake time='0.5s' /> press 2 <brake time='1s' />or press 3 to transfer to an agent.</speak>"
     },
     {
       action: 'input',
