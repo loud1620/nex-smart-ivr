@@ -45,7 +45,7 @@ app.post('/webhooks/dtmf', (req, res) => {
     [
       {
         action: 'talk',
-        text: `<speak>You have not made any selection. <break time="1s"/>For account balance enquiry,<break time='0.5s' /> press 1.<break time='1s' /> For funds transfer,<break time='0.5s' /> press 2 <break time='1s' />or press 3 to transfer to an agent.<break time='10'/></speak>`
+        text: "<speak>You have not made any selection. <break time='1s'/>For account balance enquiry,<break time='0.5s' /> press 1.<break time='1s' /> For funds transfer,<break time='0.5s' /> press 2 <break time='1s' />or press 3 to transfer to an agent.<break time='10'/></speak>"
       },
       {
         action: 'input',
