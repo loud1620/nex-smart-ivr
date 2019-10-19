@@ -54,7 +54,11 @@ app.post('/webhooks/dtmf', (req, res) => {
     ]
   ]
 
-  res.json(ncco)
+  if (!req.body.dtmf){
+      res.json(ncco[1])
+  }else{
+      res.json(ncco[0])
+  }
 })
 
 app.listen(port)
