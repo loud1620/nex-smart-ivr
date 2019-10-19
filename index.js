@@ -41,9 +41,18 @@ app.post('/webhooks/dtmf', (req, res) => {
       text: `You pressed ${req.body.dtmf}`
     }
   ]
+  const ncco_no_dtmf = [
+    {
+      action: 'talk',
+      text: `You pressed ${req.body.dtmf}`
+    }
+  ]
 
-
-  res.json(ncco)
+  if(req.body.dtmf == ""){
+      res.json(ncco_no_dtmf)
+  }else{
+    res.json(ncco)
+  }
 })
 
 app.listen(port)
