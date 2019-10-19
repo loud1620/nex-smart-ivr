@@ -44,7 +44,7 @@ app.post('/webhooks/dtmf', (req, res) => {
   const ncco_no_dtmf = [
     {
       action: 'talk',
-      text: `You pressed ${req.body.dtmf}`
+      text: "<speak>You have not entered any selection<break time='.05s'/>For account balance enquiry,<break time='0.5s' /> press 1.<break time='1s' /> For funds transfer,<break time='0.5s' /> press 2 <break time='1s' />or press 3 to transfer to an agent.<break time='10s'/></speak>"
     }
   ]
 
